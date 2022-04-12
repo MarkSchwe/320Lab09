@@ -8,12 +8,11 @@
 using namespace std;
 
 int main(){
-filebuf file;
+ifstream file;
 set<char> t;
 graph<char> A;
-file.open("graphA.dat",ios::in);
-istream file2(&file);
-file2 >> A;
+file.open("graphA.dat");
+file >> A;
 file.close();
 cout << A << endl;
 A.insertEdge('F','D',1);
